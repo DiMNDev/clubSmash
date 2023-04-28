@@ -1,0 +1,391 @@
+body,
+ul,
+li,
+h1,
+h2,
+a {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+
+header {
+  background-color: rgb(32, 31, 31);
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+header h1 {
+  color: whitesmoke;
+  border: 4px solid white;
+  padding: 6px 12px;
+  display: inline-block;
+  border-radius: 36px;
+}
+
+a[href$=".html"]:hover {
+  filter: drop-shadow(0px 0px 5px whitesmoke);
+}
+
+a[href$="join.html"]:hover {
+  filter: drop-shadow(0px 0px 5px #ff0000);
+}
+
+.banner {
+  position: relative;
+}
+
+.banner img {
+  position: relative;
+  top: 100px;
+  left: 0px;
+  max-width: 100%;
+}
+
+.banner .welcome {
+  background-color: black;
+  opacity: 0.65;
+  color: whitesmoke;
+  padding: 30px;
+  position: absolute;
+  left: 0px;
+  top: 40%;
+}
+
+.banner h2 {
+  font-size: 30px;
+}
+
+.banner h2 span {
+  font-size: 1.3em;
+}
+
+main {
+  max-width: 100%;
+  width: 1200px;
+  margin: 80px auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+article h2 {
+  font-size: 48px;
+}
+#mario {
+  color: red;
+  font-size: 1.3em;
+}
+
+#luigi {
+  color: #71d300;
+  font-size: 1.3em;
+}
+
+article p {
+  line-height: 2em;
+}
+
+.images {
+  text-align: center;
+  margin: 80px 0;
+  white-space: nowrap;
+}
+
+.images li {
+  display: inline-block;
+  width: 40%;
+  margin: 20px;
+}
+
+.images li img {
+  max-width: 100%;
+}
+
+nav {
+  background-color: rgb(26, 23, 23);
+  padding: 20px;
+  position: sticky;
+  margin-top: 100px;
+  top: 100px;
+}
+
+.join {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 60px 20px;
+  color: #4b4b4b;
+}
+
+.join h2 {
+  font-size: 36px;
+}
+
+form input {
+  margin: 20px 0;
+  padding: 10px 20px;
+  font-size: 24px;
+  border-radius: 28px;
+  border: 4px solid white;
+}
+
+footer {
+  background-color: #4b4b4b;
+  color: whitesmoke;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  white-space: nowrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav li {
+  width: 25%;
+  display: inline-block;
+  font-size: 24px;
+}
+
+nav li a {
+  text-decoration: none;
+  color: whitesmoke;
+  border: 10px;
+}
+
+nav li a[href*="join"] {
+  color: red;
+}
+/* psuedo classes */
+
+nav li a:hover {
+  text-decoration: underline;
+}
+
+.images li:hover {
+  position: relative;
+  top: -4px;
+}
+
+form input:focus {
+  border: 4px dashed #4b4b4b;
+  outline: none;
+}
+
+form input:valid {
+  border: 4px solid #71d300;
+}
+
+nav li:first-child {
+  color: red;
+}
+
+article p::first-line {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+section.join p::first-letter {
+  font-size: 1.5em;
+}
+
+section.join p::selection {
+  background-color: crimson;
+}
+
+p::after {
+  content: "...";
+}
+
+#imgMario {
+  width: 100%;
+  height: auto;
+}
+#imgLuigi {
+  width: 100%;
+  height: auto;
+}
+
+/* responsive styles */
+
+@media screen and (max-width: 1400px) {
+  .banner .welcome h2 {
+    font-size: 60px;
+  }
+  nav li {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .banner .welcome h2 {
+    margin-top: 100px;
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .banner .welcome {
+    position: static;
+    text-align: center;
+    padding: 30px;
+  }
+  .banner .welcome br {
+    display: none;
+  }
+
+  .banner .welcome h2 {
+    font-size: 20px;
+  }
+  .banner .welcome span {
+    font-size: 1em;
+  }
+  .images li {
+    width: 100%;
+    margin: 20px auto;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  nav li {
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    margin: 30px;
+  }
+
+  header {
+    position: relative;
+  }
+  nav {
+    margin-top: 0;
+    top: 0;
+  }
+}
+
+.joinForm1 {
+  display: grid;
+  grid-template-columns: 100px 200px;
+}
+
+.joinForm1 label {
+  display: block;
+  grid-column: 1 / 2;
+  text-align: center;
+  font-size: large;
+}
+
+.joinForm1 input {
+  text-align: center;
+  width: 400px;
+  grid-column: 1 / 2;
+}
+
+.thumb img {
+  position: relative;
+  width: 64px;
+  height: auto;
+}
+
+.thumb img:hover {
+  top: -5px;
+  filter: drop-shadow(3px 5px 5px black);
+}
+
+.thumb {
+  display: grid;
+  grid-template-columns: 64px 64px 64px;
+}
+
+#column-1 {
+  grid-column: 1 / 1;
+}
+
+#column-2 {
+  grid-column: 2 / 2;
+}
+
+#column-3 {
+  grid-column: 3 / 3;
+}
+
+#column-4 {
+  grid-column: 4 / 4;
+}
+
+#column-5 {
+  grid-column: 5/5;
+}
+
+.formSubmit {
+  background-color: #961919;
+  color: whitesmoke;
+  filter: drop-shadow(0px 0px 4px black);
+  border: 4px solid whitesmoke;
+  border-radius: 36px;
+}
+
+.joinForm {
+  width: 320px;
+}
+
+.joinForm label {
+  display: block;
+  text-align: center;
+  font-family: Arial;
+  font-weight: bold;
+  border-bottom: 4px solid #4b4b4b;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+
+.joinForm input {
+  text-align: center;
+}
+
+img[src*="masterHand"] {
+  height: 200px;
+  width: auto;
+}
+
+.contactContainer {
+  display: flex;
+}
+
+.contact {
+  float: right;
+}
+
+.master {
+  text-align: center;
+}
+
+.contactEmail {
+  text-align: right;
+}
+
+.smashContainer {
+  display: inline;
+}
+
+img[src*="Timer"] {
+  height: 256px;
+  width: auto;
+}
+
+.time {
+  text-align: center;
+}
+.smash {
+  text-align: center;
+}
+
+.timeCenter {
+  text-align: center;
+}
